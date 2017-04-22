@@ -1,0 +1,1152 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/Freyskeyd/gulp-prompt#readme"
+
+    >gulp-prompt (v0.2.0)</a>
+</h1>
+<h4>Add interactive console prompts to gulp</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gulp-prompt">module gulp-prompt</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-prompt.confirm">
+            function <span class="apidocSignatureSpan">gulp-prompt.</span>confirm
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-prompt.inq.Separator">
+            function <span class="apidocSignatureSpan">gulp-prompt.</span>inq.Separator
+            <span class="apidocSignatureSpan">(line)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-prompt.inq.prompt">
+            function <span class="apidocSignatureSpan">gulp-prompt.</span>inq.prompt
+            <span class="apidocSignatureSpan">(questions, allDone)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-prompt.prompt">
+            function <span class="apidocSignatureSpan">gulp-prompt.</span>prompt
+            <span class="apidocSignatureSpan">(questions, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gulp-prompt.</span>inq</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gulp-prompt.</span>inq.Separator.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gulp-prompt.</span>inq.ui</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gulp-prompt.</span>inq.ui.BottomBar.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gulp-prompt.</span>inq.ui.Prompt.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gulp-prompt.inq">module gulp-prompt.inq</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-prompt.inq.Separator">
+            function <span class="apidocSignatureSpan">gulp-prompt.inq.</span>Separator
+            <span class="apidocSignatureSpan">(line)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-prompt.inq.createPromptModule">
+            function <span class="apidocSignatureSpan">gulp-prompt.inq.</span>createPromptModule
+            <span class="apidocSignatureSpan">(opt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-prompt.inq.prompt">
+            function <span class="apidocSignatureSpan">gulp-prompt.inq.</span>prompt
+            <span class="apidocSignatureSpan">(questions, allDone)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-prompt.inq.registerPrompt">
+            function <span class="apidocSignatureSpan">gulp-prompt.inq.</span>registerPrompt
+            <span class="apidocSignatureSpan">(name, prompt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-prompt.inq.restoreDefaultPrompts">
+            function <span class="apidocSignatureSpan">gulp-prompt.inq.</span>restoreDefaultPrompts
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gulp-prompt.inq.</span>prompts</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gulp-prompt.inq.</span>ui</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gulp-prompt.inq.Separator">module gulp-prompt.inq.Separator</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-prompt.inq.Separator.Separator">
+            function <span class="apidocSignatureSpan">gulp-prompt.inq.</span>Separator
+            <span class="apidocSignatureSpan">(line)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-prompt.inq.Separator.exclude">
+            function <span class="apidocSignatureSpan">gulp-prompt.inq.Separator.</span>exclude
+            <span class="apidocSignatureSpan">(obj)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gulp-prompt.inq.Separator.prototype">module gulp-prompt.inq.Separator.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-prompt.inq.Separator.prototype.toString">
+            function <span class="apidocSignatureSpan">gulp-prompt.inq.Separator.prototype.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gulp-prompt.inq.prompt">module gulp-prompt.inq.prompt</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-prompt.inq.prompt.prompt">
+            function <span class="apidocSignatureSpan">gulp-prompt.inq.</span>prompt
+            <span class="apidocSignatureSpan">(questions, allDone)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-prompt.inq.prompt.registerPrompt">
+            function <span class="apidocSignatureSpan">gulp-prompt.inq.prompt.</span>registerPrompt
+            <span class="apidocSignatureSpan">(name, prompt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-prompt.inq.prompt.restoreDefaultPrompts">
+            function <span class="apidocSignatureSpan">gulp-prompt.inq.prompt.</span>restoreDefaultPrompts
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gulp-prompt.inq.prompt.</span>prompts</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gulp-prompt.inq.ui">module gulp-prompt.inq.ui</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-prompt.inq.ui.BottomBar">
+            function <span class="apidocSignatureSpan">gulp-prompt.inq.ui.</span>BottomBar
+            <span class="apidocSignatureSpan">( opt )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-prompt.inq.ui.Prompt">
+            function <span class="apidocSignatureSpan">gulp-prompt.inq.ui.</span>Prompt
+            <span class="apidocSignatureSpan">(prompts, opt)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gulp-prompt.inq.ui.BottomBar.prototype">module gulp-prompt.inq.ui.BottomBar.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-prompt.inq.ui.BottomBar.prototype.enforceLF">
+            function <span class="apidocSignatureSpan">gulp-prompt.inq.ui.BottomBar.prototype.</span>enforceLF
+            <span class="apidocSignatureSpan">( str )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-prompt.inq.ui.BottomBar.prototype.render">
+            function <span class="apidocSignatureSpan">gulp-prompt.inq.ui.BottomBar.prototype.</span>render
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-prompt.inq.ui.BottomBar.prototype.updateBottomBar">
+            function <span class="apidocSignatureSpan">gulp-prompt.inq.ui.BottomBar.prototype.</span>updateBottomBar
+            <span class="apidocSignatureSpan">( bottomBar )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-prompt.inq.ui.BottomBar.prototype.write">
+            function <span class="apidocSignatureSpan">gulp-prompt.inq.ui.BottomBar.prototype.</span>write
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-prompt.inq.ui.BottomBar.prototype.writeLog">
+            function <span class="apidocSignatureSpan">gulp-prompt.inq.ui.BottomBar.prototype.</span>writeLog
+            <span class="apidocSignatureSpan">( data )</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gulp-prompt.inq.ui.Prompt.prototype">module gulp-prompt.inq.ui.Prompt.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-prompt.inq.ui.Prompt.prototype.fetchAnswer">
+            function <span class="apidocSignatureSpan">gulp-prompt.inq.ui.Prompt.prototype.</span>fetchAnswer
+            <span class="apidocSignatureSpan">(question)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-prompt.inq.ui.Prompt.prototype.filterIfRunnable">
+            function <span class="apidocSignatureSpan">gulp-prompt.inq.ui.Prompt.prototype.</span>filterIfRunnable
+            <span class="apidocSignatureSpan">(question)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-prompt.inq.ui.Prompt.prototype.onCompletion">
+            function <span class="apidocSignatureSpan">gulp-prompt.inq.ui.Prompt.prototype.</span>onCompletion
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-prompt.inq.ui.Prompt.prototype.processQuestion">
+            function <span class="apidocSignatureSpan">gulp-prompt.inq.ui.Prompt.prototype.</span>processQuestion
+            <span class="apidocSignatureSpan">(question)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-prompt.inq.ui.Prompt.prototype.run">
+            function <span class="apidocSignatureSpan">gulp-prompt.inq.ui.Prompt.prototype.</span>run
+            <span class="apidocSignatureSpan">(questions, allDone)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-prompt.inq.ui.Prompt.prototype.setDefaultType">
+            function <span class="apidocSignatureSpan">gulp-prompt.inq.ui.Prompt.prototype.</span>setDefaultType
+            <span class="apidocSignatureSpan">(question)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gulp-prompt" id="apidoc.module.gulp-prompt">module gulp-prompt</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-prompt.confirm" id="apidoc.element.gulp-prompt.confirm">
+        function <span class="apidocSignatureSpan">gulp-prompt.</span>confirm
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">confirm = function (options){
+		var prompted = false;
+		return es.map(function(file, cb){
+			
+			if(prompted===true){
+				cb(null,file);
+				return;
+			}
+			
+			var opts = {
+				type: &#x27;confirm&#x27;,
+				name: &#x27;val&#x27;,
+				message: &#x27;Are you sure?&#x27;,
+				default: false
+			};
+
+			if(typeof options === &#x27;string&#x27;){
+				opts.message = options;
+			}
+
+			if(typeof options !== &#x27;object&#x27;){
+				options = {};
+			}
+
+			opts.message = options.message || opts.message;
+			opts.default = options.default || opts.default;
+
+			inq.prompt([opts], function(res){
+
+				if(res.val){
+					cb(null, file);
+				}
+
+			});
+			prompted = true;
+		});
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+
+# Gulp prompt
+
+Add interaction to gulp tasks.
+
+## .<span class="apidocCodeKeywordSpan">confirm</span>([options])
+
+Options:
+
+ - **message** - Message to be displayed
+ - **default** - Default response if none is provided
+
+This method will allow the pipe to continue if the user input is true, otherwise, it will be terminated.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-prompt.inq.Separator" id="apidoc.element.gulp-prompt.inq.Separator">
+        function <span class="apidocSignatureSpan">gulp-prompt.</span>inq.Separator
+        <span class="apidocSignatureSpan">(line)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">inq.Separator = function (line) {
+  this.type = &#x27;separator&#x27;;
+  this.line = chalk.dim(line || new Array(15).join(figures.line));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-prompt.inq.prompt" id="apidoc.element.gulp-prompt.inq.prompt">
+        function <span class="apidocSignatureSpan">gulp-prompt.</span>inq.prompt
+        <span class="apidocSignatureSpan">(questions, allDone)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">inq.prompt = function (questions, allDone) {
+  var ui = new inquirer.ui.Prompt(promptModule.prompts, opt);
+  ui.run(questions, allDone);
+  return ui;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-prompt.prompt" id="apidoc.element.gulp-prompt.prompt">
+        function <span class="apidocSignatureSpan">gulp-prompt.</span>prompt
+        <span class="apidocSignatureSpan">(questions, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">prompt = function (questions, callback){
+		var prompted = false;
+		return es.map(function(file, cb){
+			
+			if(prompted===true){
+				cb(null,file);
+				return;
+			}
+			
+			if(!questions instanceof Array){
+				questions = [questions];
+			}
+
+			if(typeof callback !== &#x27;function&#x27;){
+				callback = function(){};
+			}
+
+			inq.prompt(questions, function(res){
+				callback(res);
+				cb(null, file);
+			});
+			prompted = true;
+		});
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		message: &#x27;Continue?&#x27;,
+		default: true
+	}))
+	.pipe(gulp.dest(&#x27;dest&#x27;));
+
+```
+
+## .<span class="apidocCodeKeywordSpan">prompt</span>(questions, callback)
+
+This is a clean pass-through function for gulp to utilize the full [Inquirer.js Library](https://github.com/SBoudrias/Inquirer.js
+), please refer to them for documentation on corresponding parameters.
+
+Please note that all types are avaiable, not just the examples below.
+
+Example Input:
+```javascript
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gulp-prompt.inq" id="apidoc.module.gulp-prompt.inq">module gulp-prompt.inq</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-prompt.inq.Separator" id="apidoc.element.gulp-prompt.inq.Separator">
+        function <span class="apidocSignatureSpan">gulp-prompt.inq.</span>Separator
+        <span class="apidocSignatureSpan">(line)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Separator = function (line) {
+  this.type = &#x27;separator&#x27;;
+  this.line = chalk.dim(line || new Array(15).join(figures.line));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-prompt.inq.createPromptModule" id="apidoc.element.gulp-prompt.inq.createPromptModule">
+        function <span class="apidocSignatureSpan">gulp-prompt.inq.</span>createPromptModule
+        <span class="apidocSignatureSpan">(opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createPromptModule = function (opt) {
+  var promptModule = function (questions, allDone) {
+    var ui = new inquirer.ui.Prompt(promptModule.prompts, opt);
+    ui.run(questions, allDone);
+    return ui;
+  };
+  promptModule.prompts = {};
+
+<span class="apidocCodeCommentSpan">  /**
+   * Register a prompt type
+   * @param {String} name     Prompt type name
+   * @param {Function} prompt Prompt constructor
+   * @return {inquirer}
+   */
+</span>
+  promptModule.registerPrompt = function (name, prompt) {
+    promptModule.prompts[name] = prompt;
+    return this;
+  };
+
+  /**
+   * Register the defaults provider prompts
+   */
+
+  promptModule.restoreDefaultPrompts = function () {
+    this.registerPrompt(&#x27;list&#x27;, require(&#x27;./prompts/list&#x27;));
+    this.registerPrompt(&#x27;input&#x27;, require(&#x27;./prompts/input&#x27;));
+    this.registerPrompt(&#x27;confirm&#x27;, require(&#x27;./prompts/confirm&#x27;));
+    this.registerPrompt(&#x27;rawlist&#x27;, require(&#x27;./prompts/rawlist&#x27;));
+    this.registerPrompt(&#x27;expand&#x27;, require(&#x27;./prompts/expand&#x27;));
+    this.registerPrompt(&#x27;checkbox&#x27;, require(&#x27;./prompts/checkbox&#x27;));
+    this.registerPrompt(&#x27;password&#x27;, require(&#x27;./prompts/password&#x27;));
+  };
+
+  promptModule.restoreDefaultPrompts();
+
+  return promptModule;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-prompt.inq.prompt" id="apidoc.element.gulp-prompt.inq.prompt">
+        function <span class="apidocSignatureSpan">gulp-prompt.inq.</span>prompt
+        <span class="apidocSignatureSpan">(questions, allDone)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">prompt = function (questions, allDone) {
+  var ui = new inquirer.ui.Prompt(promptModule.prompts, opt);
+  ui.run(questions, allDone);
+  return ui;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		message: &#x27;Continue?&#x27;,
+		default: true
+	}))
+	.pipe(gulp.dest(&#x27;dest&#x27;));
+
+```
+
+## .<span class="apidocCodeKeywordSpan">prompt</span>(questions, callback)
+
+This is a clean pass-through function for gulp to utilize the full [Inquirer.js Library](https://github.com/SBoudrias/Inquirer.js
+), please refer to them for documentation on corresponding parameters.
+
+Please note that all types are avaiable, not just the examples below.
+
+Example Input:
+```javascript
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-prompt.inq.registerPrompt" id="apidoc.element.gulp-prompt.inq.registerPrompt">
+        function <span class="apidocSignatureSpan">gulp-prompt.inq.</span>registerPrompt
+        <span class="apidocSignatureSpan">(name, prompt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">registerPrompt = function (name, prompt) {
+  inquirer.prompt.registerPrompt(name, prompt);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-prompt.inq.restoreDefaultPrompts" id="apidoc.element.gulp-prompt.inq.restoreDefaultPrompts">
+        function <span class="apidocSignatureSpan">gulp-prompt.inq.</span>restoreDefaultPrompts
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">restoreDefaultPrompts = function () {
+  inquirer.prompt.restoreDefaultPrompts();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gulp-prompt.inq.Separator" id="apidoc.module.gulp-prompt.inq.Separator">module gulp-prompt.inq.Separator</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-prompt.inq.Separator.Separator" id="apidoc.element.gulp-prompt.inq.Separator.Separator">
+        function <span class="apidocSignatureSpan">gulp-prompt.inq.</span>Separator
+        <span class="apidocSignatureSpan">(line)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Separator = function (line) {
+  this.type = &#x27;separator&#x27;;
+  this.line = chalk.dim(line || new Array(15).join(figures.line));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-prompt.inq.Separator.exclude" id="apidoc.element.gulp-prompt.inq.Separator.exclude">
+        function <span class="apidocSignatureSpan">gulp-prompt.inq.Separator.</span>exclude
+        <span class="apidocSignatureSpan">(obj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">exclude = function (obj) {
+  return obj.type !== &#x27;separator&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gulp-prompt.inq.Separator.prototype" id="apidoc.module.gulp-prompt.inq.Separator.prototype">module gulp-prompt.inq.Separator.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-prompt.inq.Separator.prototype.toString" id="apidoc.element.gulp-prompt.inq.Separator.prototype.toString">
+        function <span class="apidocSignatureSpan">gulp-prompt.inq.Separator.prototype.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+  return this.line;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gulp-prompt.inq.prompt" id="apidoc.module.gulp-prompt.inq.prompt">module gulp-prompt.inq.prompt</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-prompt.inq.prompt.prompt" id="apidoc.element.gulp-prompt.inq.prompt.prompt">
+        function <span class="apidocSignatureSpan">gulp-prompt.inq.</span>prompt
+        <span class="apidocSignatureSpan">(questions, allDone)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">prompt = function (questions, allDone) {
+  var ui = new inquirer.ui.Prompt(promptModule.prompts, opt);
+  ui.run(questions, allDone);
+  return ui;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		message: &#x27;Continue?&#x27;,
+		default: true
+	}))
+	.pipe(gulp.dest(&#x27;dest&#x27;));
+
+```
+
+## .<span class="apidocCodeKeywordSpan">prompt</span>(questions, callback)
+
+This is a clean pass-through function for gulp to utilize the full [Inquirer.js Library](https://github.com/SBoudrias/Inquirer.js
+), please refer to them for documentation on corresponding parameters.
+
+Please note that all types are avaiable, not just the examples below.
+
+Example Input:
+```javascript
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-prompt.inq.prompt.registerPrompt" id="apidoc.element.gulp-prompt.inq.prompt.registerPrompt">
+        function <span class="apidocSignatureSpan">gulp-prompt.inq.prompt.</span>registerPrompt
+        <span class="apidocSignatureSpan">(name, prompt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">registerPrompt = function (name, prompt) {
+  promptModule.prompts[name] = prompt;
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-prompt.inq.prompt.restoreDefaultPrompts" id="apidoc.element.gulp-prompt.inq.prompt.restoreDefaultPrompts">
+        function <span class="apidocSignatureSpan">gulp-prompt.inq.prompt.</span>restoreDefaultPrompts
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">restoreDefaultPrompts = function () {
+  this.registerPrompt(&#x27;list&#x27;, require(&#x27;./prompts/list&#x27;));
+  this.registerPrompt(&#x27;input&#x27;, require(&#x27;./prompts/input&#x27;));
+  this.registerPrompt(&#x27;confirm&#x27;, require(&#x27;./prompts/confirm&#x27;));
+  this.registerPrompt(&#x27;rawlist&#x27;, require(&#x27;./prompts/rawlist&#x27;));
+  this.registerPrompt(&#x27;expand&#x27;, require(&#x27;./prompts/expand&#x27;));
+  this.registerPrompt(&#x27;checkbox&#x27;, require(&#x27;./prompts/checkbox&#x27;));
+  this.registerPrompt(&#x27;password&#x27;, require(&#x27;./prompts/password&#x27;));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gulp-prompt.inq.ui" id="apidoc.module.gulp-prompt.inq.ui">module gulp-prompt.inq.ui</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-prompt.inq.ui.BottomBar" id="apidoc.element.gulp-prompt.inq.ui.BottomBar">
+        function <span class="apidocSignatureSpan">gulp-prompt.inq.ui.</span>BottomBar
+        <span class="apidocSignatureSpan">( opt )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Prompt( opt ) {
+  opt || (opt = {});
+
+  Base.apply( this, arguments );
+
+  this.log = through( this.writeLog.bind(this) );
+  this.bottomBar = opt.bottomBar || &#x22;&#x22;;
+  this.render();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-prompt.inq.ui.Prompt" id="apidoc.element.gulp-prompt.inq.ui.Prompt">
+        function <span class="apidocSignatureSpan">gulp-prompt.inq.ui.</span>Prompt
+        <span class="apidocSignatureSpan">(prompts, opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Prompt = function (prompts, opt) {
+  Base.call(this, opt);
+  this.prompts = prompts;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gulp-prompt.inq.ui.BottomBar.prototype" id="apidoc.module.gulp-prompt.inq.ui.BottomBar.prototype">module gulp-prompt.inq.ui.BottomBar.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-prompt.inq.ui.BottomBar.prototype.enforceLF" id="apidoc.element.gulp-prompt.inq.ui.BottomBar.prototype.enforceLF">
+        function <span class="apidocSignatureSpan">gulp-prompt.inq.ui.BottomBar.prototype.</span>enforceLF
+        <span class="apidocSignatureSpan">( str )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">enforceLF = function ( str ) {
+  return str.match(/[\r\n]$/) ? str : str + &#x22;\n&#x22;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-prompt.inq.ui.BottomBar.prototype.render" id="apidoc.element.gulp-prompt.inq.ui.BottomBar.prototype.render">
+        function <span class="apidocSignatureSpan">gulp-prompt.inq.ui.BottomBar.prototype.</span>render
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function () {
+  this.write(this.bottomBar);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-prompt.inq.ui.BottomBar.prototype.updateBottomBar" id="apidoc.element.gulp-prompt.inq.ui.BottomBar.prototype.updateBottomBar">
+        function <span class="apidocSignatureSpan">gulp-prompt.inq.ui.BottomBar.prototype.</span>updateBottomBar
+        <span class="apidocSignatureSpan">( bottomBar )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">updateBottomBar = function ( bottomBar ) {
+  this.bottomBar = bottomBar;
+  rlUtils.clearLine(this.rl, 1);
+  return this.render();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-prompt.inq.ui.BottomBar.prototype.write" id="apidoc.element.gulp-prompt.inq.ui.BottomBar.prototype.write">
+        function <span class="apidocSignatureSpan">gulp-prompt.inq.ui.BottomBar.prototype.</span>write
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">write = function (message) {
+  var msgLines = message.split(/\n/);
+  this.height = msgLines.length;
+
+  // Write message to screen and setPrompt to control backspace
+  this.rl.setPrompt( _.last(msgLines) );
+
+  if ( this.rl.output.rows === 0 &#x26;&#x26; this.rl.output.columns === 0 ) {
+<span class="apidocCodeCommentSpan">    /* When it&#x27;s a tty through serial port there&#x27;s no terminal info and the render will malfunction,
+       so we need enforce the cursor to locate to the leftmost position for rendering. */
+</span>    rlUtils.left( this.rl, message.length + this.rl.line.length );
+  }
+  this.rl.output.write( message );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-prompt.inq.ui.BottomBar.prototype.writeLog" id="apidoc.element.gulp-prompt.inq.ui.BottomBar.prototype.writeLog">
+        function <span class="apidocSignatureSpan">gulp-prompt.inq.ui.BottomBar.prototype.</span>writeLog
+        <span class="apidocSignatureSpan">( data )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">writeLog = function ( data ) {
+  rlUtils.clearLine(this.rl, 1);
+  this.rl.output.write(this.enforceLF(data.toString()));
+  return this.render();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gulp-prompt.inq.ui.Prompt.prototype" id="apidoc.module.gulp-prompt.inq.ui.Prompt.prototype">module gulp-prompt.inq.ui.Prompt.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-prompt.inq.ui.Prompt.prototype.fetchAnswer" id="apidoc.element.gulp-prompt.inq.ui.Prompt.prototype.fetchAnswer">
+        function <span class="apidocSignatureSpan">gulp-prompt.inq.ui.Prompt.prototype.</span>fetchAnswer
+        <span class="apidocSignatureSpan">(question)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fetchAnswer = function (question) {
+  var Prompt = this.prompts[question.type];
+  var prompt = new Prompt(question, this.rl, this.answers);
+  var answers = this.answers;
+  return utils.createObservableFromAsync(function () {
+    var done = this.async();
+    prompt.run(function (answer) {
+      answers[question.name] = answer;
+      done({ name: question.name, answer: answer });
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-prompt.inq.ui.Prompt.prototype.filterIfRunnable" id="apidoc.element.gulp-prompt.inq.ui.Prompt.prototype.filterIfRunnable">
+        function <span class="apidocSignatureSpan">gulp-prompt.inq.ui.Prompt.prototype.</span>filterIfRunnable
+        <span class="apidocSignatureSpan">(question)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">filterIfRunnable = function (question) {
+  if (question.when == null) {
+    return rx.Observable.return(question);
+  }
+
+  var handleResult = function (obs, shouldRun) {
+    if (shouldRun) {
+      obs.onNext(question);
+    }
+    obs.onCompleted();
+  };
+
+  var answers = this.answers;
+  return rx.Observable.defer(function () {
+    return rx.Observable.create(function (obs) {
+      if (_.isBoolean(question.when)) {
+        handleResult(obs, question.when);
+        return;
+      }
+
+      runAsync(question.when, function (shouldRun) {
+        handleResult(obs, shouldRun);
+      }, answers);
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-prompt.inq.ui.Prompt.prototype.onCompletion" id="apidoc.element.gulp-prompt.inq.ui.Prompt.prototype.onCompletion">
+        function <span class="apidocSignatureSpan">gulp-prompt.inq.ui.Prompt.prototype.</span>onCompletion
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">onCompletion = function () {
+  this.close();
+
+  if (_.isFunction(this.completed)) {
+    this.completed(this.answers);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-prompt.inq.ui.Prompt.prototype.processQuestion" id="apidoc.element.gulp-prompt.inq.ui.Prompt.prototype.processQuestion">
+        function <span class="apidocSignatureSpan">gulp-prompt.inq.ui.Prompt.prototype.</span>processQuestion
+        <span class="apidocSignatureSpan">(question)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">processQuestion = function (question) {
+  return rx.Observable.defer(function () {
+    var obs = rx.Observable.create(function (obs) {
+      obs.onNext(question);
+      obs.onCompleted();
+    });
+
+    return obs
+      .concatMap(this.setDefaultType.bind(this))
+      .concatMap(this.filterIfRunnable.bind(this))
+      .concatMap(utils.fetchAsyncQuestionProperty.bind(null, question, &#x27;message&#x27;, this.answers))
+      .concatMap(utils.fetchAsyncQuestionProperty.bind(null, question, &#x27;default&#x27;, this.answers))
+      .concatMap(utils.fetchAsyncQuestionProperty.bind(null, question, &#x27;choices&#x27;, this.answers))
+      .concatMap(this.fetchAnswer.bind(this));
+  }.bind(this));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-prompt.inq.ui.Prompt.prototype.run" id="apidoc.element.gulp-prompt.inq.ui.Prompt.prototype.run">
+        function <span class="apidocSignatureSpan">gulp-prompt.inq.ui.Prompt.prototype.</span>run
+        <span class="apidocSignatureSpan">(questions, allDone)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">run = function (questions, allDone) {
+  // Keep global reference to the answers
+  this.answers = {};
+  this.completed = allDone;
+
+  // Make sure questions is an array.
+  if (_.isPlainObject(questions)) {
+    questions = [questions];
+  }
+
+  // Create an observable, unless we received one as parameter.
+  // Note: As this is a public interface, we cannot do an instanceof check as we won&#x27;t
+  // be using the exact same object in memory.
+  var obs = _.isArray(questions) ? rx.Observable.from(questions) : questions;
+
+  this.process = obs
+    .concatMap(this.processQuestion.bind(this))
+    .publish(); // `publish` creates a hot Observable. It prevents duplicating prompts.
+
+  this.process.subscribe(
+    _.noop,
+    function (err) { throw err; },
+    this.onCompletion.bind(this)
+  );
+
+  return this.process.connect();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-prompt.inq.ui.Prompt.prototype.setDefaultType" id="apidoc.element.gulp-prompt.inq.ui.Prompt.prototype.setDefaultType">
+        function <span class="apidocSignatureSpan">gulp-prompt.inq.ui.Prompt.prototype.</span>setDefaultType
+        <span class="apidocSignatureSpan">(question)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setDefaultType = function (question) {
+  // Default type to input
+  if (!this.prompts[question.type]) {
+    question.type = &#x27;input&#x27;;
+  }
+  return rx.Observable.defer(function () {
+    return rx.Observable.return(question);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
